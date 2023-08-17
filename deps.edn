@@ -1,0 +1,12 @@
+{
+ :paths   ["src"]
+ :deps    {
+           org.clojure/clojure {:mvn/version "1.11.1"}
+           quil/quil {:mvn/version "3.1.0"}}
+ :aliases {
+           :test {:extra-deps {speclj/speclj {:mvn/version "3.4.3"}}
+                  :extra-paths ["spec"]}
+           :spec {:main-opts ["-m" "speclj.main" "-c"]}          
+           :start {:main-opts ["-m" "orbits.main"]}
+           }
+ }
